@@ -1,0 +1,30 @@
+{{#if prods}}
+    <div class="div-prod">
+        <h1>LISTADO DE PRODUCTOS</h1>
+        <table class="content-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Foto</th>
+            </tr>
+          </thead>
+          <tbody>
+                <ul class="lista">
+                    {{#each prods}}
+                        <tr>
+                            <td>{{this.Id}}</td>
+                            <td>{{this.Data}}</td>
+                            <td>{{this.Price}}</td>
+                            <td><img width="50" src={{this.Img}} alt="img-item"></td>
+                        </tr>
+                    {{/each}}
+                </ul>
+          </tbody>
+        </table>
+
+    {{else}}
+    <h1 class="">NO HAY PRODUCTOS EN STOCK</h1>
+    </div>
+{{/if}} 
